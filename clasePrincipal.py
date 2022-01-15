@@ -193,6 +193,9 @@ class Recetas(Ingredientes):
                         print("El producto no se encuentra en la base de datos")
                         print("**********************************")
                         self.menuIngredientes()
-print("Hola mundo")
+def rama():
+    print("rama de nicolas")
+def impresion ():
+    print("Hola ke ace")
 #funcion para insertar ingredientes
 #Ingredientes().verificacionIngrediente(Conexion().conexion(),"huevos")
