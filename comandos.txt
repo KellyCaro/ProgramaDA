@@ -1,0 +1,2 @@
+git init → para iniciar un repositorio local 
+git add . → para añadir al stating area
