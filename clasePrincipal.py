@@ -194,10 +194,4 @@ class Recetas(Ingredientes):
                         print("**********************************")
                         self.menuIngredientes()
 
-def impresion():
-    
-    print("Hola mundo")
-
-
-#funcion para insertar ingredientes
 #Ingredientes().verificacionIngrediente(Conexion().conexion(),"huevos")
