@@ -1,2 +1,179 @@
 git init → para iniciar un repositorio local 
-git add . → para añadir al stating area
+ git add . → para añadir al stating area
+git status= verificar si estan listos para subir
+
+
+
+******************************************************************************
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA
+$ git init
+Initialized empty Git repository in C:/Users/LENOVO/Documents/programa DA/.git/
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git add .
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ ^C
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   CalculadoraPonque.py
+        new file:   __pycache__/clasePrincipal.cpython-39.pyc
+        new file:   basesDeDatosDA.db
+        new file:   clasePrincipal.py
+        new file:   comandos.txt
+        new file:   main.py
+
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ ^C
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git commit -m "mensaje"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'LENOVO@DESKTOP-SU34CCQ.(none)')
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git config --global user.email "you@example.com"kcmirandar@unal.edu.co
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git config --global user.email "kcmirandar@unal.edu.co"
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git config --global user.name "KellyCaro"
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git commit -m "mensaje"
+[master (root-commit) ca7f587] mensaje
+ 6 files changed, 478 insertions(+)
+ create mode 100644 CalculadoraPonque.py
+ create mode 100644 __pycache__/clasePrincipal.cpython-39.pyc
+ create mode 100644 basesDeDatosDA.db
+ create mode 100644 clasePrincipal.py
+ create mode 100644 comandos.txt
+ create mode 100644 main.py
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git remote add https://github.com/KellyCaro/ProgramaDA.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$  git remote add <ProgramaDA> <https://github.com/KellyCaro/ProgramaDA.git>
+bash: syntax error near unexpected token `<'
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ ^C
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$  git remote add ProgramaDA https://github.com/KellyCaro/ProgramaDA.git
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (master)
+$ git branch -M main
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (main)
+$ git push -u origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (main)
+$ git push -u ProgramaDA main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 7.29 KiB | 3.64 MiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/KellyCaro/ProgramaDA.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'ProgramaDA'.
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (main)
+$ git diff .
+diff --git a/clasePrincipal.py b/clasePrincipal.py
+index c2758a3..4bf0d83 100644
+--- a/clasePrincipal.py
++++ b/clasePrincipal.py
+@@ -193,6 +193,6 @@ class Recetas(Ingredientes):
+                         print("El producto no se encuentra en la base de datos")
+                         print("**********************************")
+                         self.menuIngredientes()
+-
++print("Hola")
+ #funcion para insertar ingredientes
+ #Ingredientes().verificacionIngrediente(Conexion().conexion(),"huevos")
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (main)
+$ git add .
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (main)
+$ git commit -m "hola"
+[main 8a53702] hola
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@DESKTOP-SU34CCQ MINGW64 ~/Documents/programa DA (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 300 bytes | 300.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/KellyCaro/ProgramaDA.git
+   ca7f587..8a53702  main -> main
+
