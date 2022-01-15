@@ -194,4 +194,8 @@ class Recetas(Ingredientes):
                         print("**********************************")
                         self.menuIngredientes()
 
+
+def impresion():
+    print("Hola")
+
 #Ingredientes().verificacionIngrediente(Conexion().conexion(),"huevos")
