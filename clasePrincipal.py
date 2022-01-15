@@ -196,6 +196,6 @@ class Recetas(Ingredientes):
 
 
 def impresion():
-    print("Hola")
+    print("Feliz año")
 
 #Ingredientes().verificacionIngrediente(Conexion().conexion(),"huevos")
