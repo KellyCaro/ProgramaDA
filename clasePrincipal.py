@@ -196,10 +196,6 @@ class Recetas(Ingredientes):
 
 
 def impresion():
-<<<<<<< HEAD
-    print("Feliz año")
-=======
-    print("Hola ke ace")
->>>>>>> 0c62956c0c1daedf912be2a7bf2b2261880f5e64
+    print("F")
 
 #Ingredientes().verificacionIngrediente(Conexion().conexion(),"huevos")
