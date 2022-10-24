@@ -8,7 +8,7 @@ def clearConsole():
         command = 'cls'
     os.system(command)
 
-
+"""Es es mi nuevo cambio"""
 """Si tengo que acceder a las listas de sql lite tengo que pasar como parametro y este codigo
 cursorObj = conexion.cursor()
 datos = Client_data
